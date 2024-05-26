@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,200;1,600;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    appearance: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.1s;
+    text-transform: capitalize;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rm;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    white-space: normal;
+    font-size: 14px;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+    background-color: var(--color-background-color);
+}
+img{
+    object-fit: cover;
+}
+button{
+    cursor: pointer;
+}
+
+.container{
+    width: 95%;
+    margin: 0 auto;
+}
+
+::-webkit-scrollbar{
+    height: .5rem;
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--color-primary) ;
+    border-radius: 5rem;
+    transition: 0.3s;
+    border-radius: none;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #00395f;
+}
+
+:root{
+    --color-primary:red;
+    --color-background-color: rgb(27, 27, 27);
+    --color-slide-background-color: rgb(26, 23, 23);
+    --color-menu: rgb(255, 241, 241);
+    --color-wight: white;
+    --color-light-red: rgb(255, 236, 236);
+    --color-red: red;
+
+
+    --font-size: 0.9rem;
+
+    --margin-left: 2rem;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 15rem auto 17rem;
+    gap: 2rem;
+}
+
+.left{
+    background-color: var(--color-slide-background-color);
+    width: 15rem;
+    height: fit-content;
+    border-radius: 2rem;
+}
+.left h1{
+    margin-left: var(--margin-left);
+    color: var(--color-light-red);
+}
+.left span{
+    color: var(--color-primary);
+}
+
+.left .menu,
+.left .library,
+.left .category,
+.left .genral{
+    color: var(--color-light-red);
+    margin-left: var(--margin-left);
+    margin-bottom: 2rem;
+}
+
+.left h2{
+    margin-bottom: 1rem;
+}
+.left .menu a ,
+.left .library a,
+.left .category a,
+.left .genral a{
+    color: var(--color-light-red);
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    transition: 0.3s;
+    padding: 1rem;
+}
+
+.left .menu .active{
+    color: var(--color-primary);
+    border-right: 3px solid var(--color-primary);
+}
+.left .menu i,
+.left .library i,
+.left .category i,
+.left .genral i{
+    font-size: 1rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+.left a:hover{
+    background-color: var(--color-background-color);
+}
+.log-in{
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.642);
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    position: fixed;
+}
+.log-in form{
+    margin: auto;
+    margin-top: 50%;
+    margin-left: 230%;
+    padding: 3rem;
+    background-color: black;
+    color: white;
+    border-radius: 1rem;
+}
+.log-in form h2{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.log-in form label{
+    font-size: 1.1rem;
+}
+.log-in form input{
+    padding: 0.7rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.4rem;
+    display: block;
+}
+.log-in form ::placeholder{
+    color: black;
+}
+
+.log-in form [type="submit"]{
+    background-color: var(--color-primary);
+    font-weight: bold;
+    cursor: pointer;
+}
+.log-in form [type="submit"]:hover{
+    background-color: var(--color-wight);
+}
+
+
+
+/*-------------------- start .meddle -----------------*/
+
+.meddle {
+    width: 100%;
+}
+
+.meddle .text{
+    color: var(--color-wight);
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 1.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.meddle .room1{
+    position: relative;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.meddle .room1 img{
+    width: 100%;
+    height: 25rem;
+    position: absolute;
+    z-index: -3;
+    border-radius: 1rem;
+}
+
+.meddle .room1 .gradiant{
+    z-index: -1;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.952), rgba(0, 0, 0, 0.696), transparent);
+    height: 25rem;
+    border-radius: 1rem;
+}
+
+.meddle .room1 .box1{
+    color: var(--color-wight);
+    padding: 5rem;
+}
+
+.meddle .room1 .box1 h3{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+}
+.meddle .room1 .box1 h1{
+    font-size: 2rem;
+}
+
+.meddle .room1 .box1 button{
+    border: none;
+    padding: 1rem;
+    background-color: var(--color-primary);
+    border-radius: 0.8rem;
+    font-size: 1rem;
+    color: var(--color-wight);
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-right: 2rem;
+}
+.meddle .room1 .box1 button:hover{
+    cursor: pointer;
+    background-color: var(--color-wight);
+    color: black;
+}
+.meddle .room1 .box1 i{
+    padding: 0.9rem;
+    background-color: var(--color-light-red);
+    border-radius: 0.8rem;
+    font-size: 1.3rem;
+    color: var(--color-background-color);
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+.meddle .room1 .box1 i:hover{
+    background-color: var(--color-primary);
+    color: var(--color-wight);
+}
+
+
+.room2 h2{
+    color: var(--color-wight);
+    margin-bottom: 5 rem;
+}
+.room2 .boxes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.room2 #boxes{
+    margin-top: 2rem;
+    
+} 
+
+
+.room2 .content{
+    position: relative;
+    width: 10rem;
+    height: 13rem;
+    background-image: url(../images/10.jpg);
+    background-size: cover;
+    border-radius: 0.7rem;
+    /* margin-top: 2rem; */
+}
+#room2 .content{
+    background-image: url(../images/17.jpg);
+    background-size: cover;
+}
+#room3 .content{
+    background-image: url(../images/18.jpg);
+    background-size: cover;
+}
+.room2 .content i{
+    position: absolute;
+    padding: 0.7rem;
+    background-color: var(--color-light-red);
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    color: var(--color-background-color);
+    font-weight: bold;
+    margin-top: 1rem;
+    right: 0.7rem;
+    cursor: pointer;
+    transition: 0.3;
+}
+
+.room2 .content i:hover{
+    background-color: var(--color-primary);
+    color: var(--color-wight);
+}
+.room2 .content button{
+    position: absolute;
+    border: none;
+    padding: 1rem;
+    background-color: var(--color-primary);
+    border-radius: 0.8rem;
+    font-size: 1rem;
+    color: var(--color-wight);
+    font-weight: bold;
+    bottom: 1rem;
+    right: 1rem;
+    transition: 0.3s;
+}
+.room2 .content button:hover{
+    background-color: white;
+    color: black;
+}
+
+.room2 #content{
+    background-image: url(../images/7.jpg);
+    background-size: cover;
+}
+.room2 #content1{
+    background-image: url(../images/8.jpg);
+    background-size: cover;
+}
+.room2 #content2{
+    background-image: url(../images/5.jpg);
+    background-size: cover;
+}
+
+#room2 #content{
+    background-image: url(../images/14.jpg);
+    background-size: cover;
+}
+#room2 #content1{
+    background-image: url(../images/15.jpg);
+    background-size: cover;
+}
+#room2 #content2{
+    background-image: url(../images/16.jpg);
+    background-size: cover;
+}
+
+
+#room3 #content{
+    background-image: url(../images/22.jpg);
+    background-size: cover;
+}
+#room3 #content1{
+    background-image: url(../images/20.jpg);
+    background-size: cover;
+}
+#room3 #content2{
+    background-image: url(../images/21.jpg);
+    background-size: cover;
+}
+
+
+
+
+
+
+/*------------------- start right --------------------*/
+
+.right{
+    background-color: var(--color-slide-background-color);
+    color: var(--color-wight);
+    height: fit-content;
+    border-radius: 0 0 1rem 1rem;
+}
+.right .search input{
+    padding: 1rem;
+    border-radius: 2rem;
+    margin-top: 1.7rem;
+    margin-bottom: 2rem;
+}
+.right .search input::placeholder{
+    color: black;
+}
+
+.right .boxOne{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+
+.right .boxTow{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1.5rem;
+}
+.right .boxTow img{
+    width: 4rem;
+    height: 5rem;
+}
+.right .boxTow .text h5{
+    line-height: 1.7;
+    margin-bottom: 0.6rem;
+}
+.right .boxTow i{
+    color: yellow;
+}
+.right .boxTow p{
+    color: darkgrey;
+}
+
+.right button{
+    color: black;
+    background-color: var(--color-light-red);
+    width: 80%;
+    margin: auto;
+    padding: 1rem;
+    font-weight: bold;
+    margin-left: 10%;
+    border-radius: 0.3rem;
+    margin-bottom: 2rem;
+    transition: 0.3s;
+}
+.right button:hover{
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.right #selectTow{
+    display: none;
+    margin-bottom: 2rem;
+}
+
+.right #selecting{
+    display: none;
+} 
+.left,
+.meddle,
+.right {
+    flex: 1;
+}
+/* =========start qury========== */
+@media screen and (max-width: 1200px) {
+    .left a h3{
+        display: none;
+    }
+    .left {
+        width: fit-content;
+    }
+    .left .logo h1{
+        display: none;
+    }
+    .left .menu h2{
+        margin-top: 2rem;
+    }
+}
+@media screen and (max-width:992px){
+    .right{
+        display: none;
+    }
+}
